@@ -1,3 +1,5 @@
+### Desenvolvido por Rubens Lemos em julho de 2020
+### Tech Challenge - Digital Innovation One - Banco Carrefour
 from telebot import TeleBot
 import json
 import sys
@@ -41,7 +43,7 @@ def parrot(message):
     msg['bot'] = diaflow.send_text_dialog(credentials['project_id'], session_id, user_msg, config.lang, credentials['private_key'])
     app.send_message(session_id, msg['bot']['text'])
     result = mongodb.insert_data(msg)
-    print(result)  
+    print(result)  #printar no terminal o resultado da inserção no banco de dados - apenas didático
 
 if __name__ == "__main__":
     app.config['api_key'] = config.api_key_telegram
